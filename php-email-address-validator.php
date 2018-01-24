@@ -9,67 +9,67 @@ namespace PHPEmailAddressValidator{
 		/**
 		* @var string $whiteListDatabasePath A string containing the path to the file that contains a list of accepted email providers separated by a breakline (\n).
 		*/
-		private static $whiteListDatabasePath = NULL;
+		protected static $whiteListDatabasePath = NULL;
 		
 		/**
 		* @var string $whiteListDatabase A string containing the content of the of the providers' white list, if it is going to be cached for next uses.
 		*/
-		private static $whiteListDatabase = NULL;
+		protected static $whiteListDatabase = NULL;
 		
 		/**
 		* @var bool $whiteListCache If set to "true", the content of the of the providers' white list will be cached for next uses, otherwise not.
 		*/
-		private static $whiteListCache = false;
+		protected static $whiteListCache = false;
 		
 		/**
 		* @var string $whiteListEncoding A string representing the encoding of the providers' white list file.
 		*/
-		private static $whiteListEncoding = NULL;
+		protected static $whiteListEncoding = NULL;
 		
 		/**
 		* @var string $blackListDatabasePath A string containing the path to the file that contains a list of banned email providers separated by a breakline (\n).
 		*/
-		private static $blackListDatabasePath = NULL;
+		protected static $blackListDatabasePath = NULL;
 		
 		/**
 		* @var string $blackListDatabase A string containing the content of the of the providers' black list, if it is going to be cached for next uses.
 		*/
-		private static $blackListDatabase = NULL;
+		protected static $blackListDatabase = NULL;
 		
 		/**
 		* @var bool $blackListCache If set to "true", the content of the of the providers' black list will be cached for next uses, otherwise not.
 		*/
-		private static $blackListCache = false;
+		protected static $blackListCache = false;
 		
 		/**
 		* @var string $blackListEncoding A string representing the encoding of the providers' black list file.
 		*/
-		private static $blackListEncoding = NULL;
+		protected static $blackListEncoding = NULL;
 		
 		/**
 		* @var string $disposableProvidersDatabasePath A string containing the path to the file that contains a list of disposable email providers separated by a breakline (\n).
 		*/
-		private static $disposableProvidersDatabasePath = NULL;
+		protected static $disposableProvidersDatabasePath = NULL;
 		
 		/**
 		* @var string $disposableProvidersDatabase A string containing the content of the of the disposable email providers' list, if it is going to be cached for next uses.
 		*/
-		private static $disposableProvidersDatabase = NULL;
+		protected static $disposableProvidersDatabase = NULL;
 		
 		/**
 		* @var bool $disposableProvidersCache If set to "true", the content of the of the disposable email providers' list will be cached for next uses, otherwise not.
 		*/
-		private static $disposableProvidersCache = false;
+		protected static $disposableProvidersCache = false;
 		
 		/**
 		* @var string $disposableProvidersEncoding A string representing the encoding of the disposable email providers' list file.
 		*/
-		private static $disposableProvidersEncoding = NULL;
+		protected static $disposableProvidersEncoding = NULL;
 		
 		/**
 		* @var int $MXTimeout An integer number greater than zero representing the timeout (in seconds) used during connection with the e-mail provider to test.
 		*/
-		private static $MXTimeout = 90;
+		protected static $MXTimeout = 90;
 		
 		/**
 		* Sets the path to the file that contains the list of accepted email providers.
