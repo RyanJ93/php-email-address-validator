@@ -105,6 +105,7 @@ namespace PHPEmailAddressValidator{
 			if ( $value !== true ){
 				self::$whiteListCache = false;
 				self::$whiteListDatabase = NULL;
+				return;
 			}
 			self::$whiteListCache = true;
 		}
@@ -175,6 +176,7 @@ namespace PHPEmailAddressValidator{
 			if ( self::$blackListDatabasePath !== $path ){
 				self::$blackListDatabase = self::$blackListCache === false ? NULL : '';
 				self::$blackListDatabasePath = $path;
+				return;
 			}
 		}
 		
@@ -197,6 +199,7 @@ namespace PHPEmailAddressValidator{
 			if ( $value !== true ){
 				self::$blackListCache = false;
 				self::$blackListDatabase = NULL;
+				return;
 			}
 			self::$blackListCache = true;
 		}
@@ -289,6 +292,7 @@ namespace PHPEmailAddressValidator{
 			if ( $value !== true ){
 				self::$disposableProvidersCache = false;
 				self::$disposableProvidersDatabase = NULL;
+				return;
 			}
 			self::$disposableProvidersCache = true;
 		}
