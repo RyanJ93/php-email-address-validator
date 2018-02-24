@@ -1,6 +1,6 @@
 {
 	"name": "ryanj93/php-email-address-validator",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "A simple tool that allows you to validate and check for e-mail address existence.",
 	"type": "library",
 	"license": "GPL-3.0-or-later",

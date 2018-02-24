@@ -137,7 +137,7 @@ namespace PHPEmailAddressValidator{
 			if ( self::$whiteListCache === false || self::$whiteListDatabasePath === NULL ){
 				return false;
 			}
-			$data = @file_get_contents(dirname(__FILE__) . '/' . self::$whiteListDatabasePath);
+			$data = @file_get_contents(self::$whiteListDatabasePath);
 			if ( $data === false ){
 				throw new \Exception('Unable to load the dictionary.');
 			}
@@ -231,7 +231,7 @@ namespace PHPEmailAddressValidator{
 			if ( self::$blackListCache === false || self::$blackListDatabasePath === NULL ){
 				return false;
 			}
-			$data = @file_get_contents(dirname(__FILE__) . '/' . self::$blackListDatabasePath);
+			$data = @file_get_contents(self::$blackListDatabasePath);
 			if ( $data === false ){
 				throw new \Exception('Unable to load the dictionary.');
 			}
@@ -324,7 +324,7 @@ namespace PHPEmailAddressValidator{
 			if ( self::$disposableProvidersCache === false || self::$disposableProvidersDatabasePath === NULL ){
 				return false;
 			}
-			$data = @file_get_contents(dirname(__FILE__) . '/' . self::$disposableProvidersDatabasePath);
+			$data = @file_get_contents(self::$disposableProvidersDatabasePath);
 			if ( $data === false ){
 				throw new \Exception('Unable to load the dictionary.');
 			}
@@ -462,7 +462,7 @@ namespace PHPEmailAddressValidator{
 						return true;
 					}
 				}else{
-					$database = @file_get_contents(dirname(__FILE__) . '/' . self::$whiteListDatabasePath);
+					$database = @file_get_contents(self::$whiteListDatabasePath);
 					if ( $database === false ){
 						throw new \Exception('Unable to read from white list database.');
 					}
@@ -496,7 +496,7 @@ namespace PHPEmailAddressValidator{
 						return true;
 					}
 				}else{
-					$database = @file_get_contents(dirname(__FILE__) . '/' . self::$blackListDatabasePath);
+					$database = @file_get_contents(self::$blackListDatabasePath);
 					if ( $database === false ){
 						throw new \Exception('Unable to read from black list database.');
 					}
@@ -563,7 +563,7 @@ namespace PHPEmailAddressValidator{
 					return true;
 				}
 			}else{
-				$database = @file_get_contents(dirname(__FILE__) . '/' . self::$disposableProvidersDatabasePath);
+				$database = @file_get_contents(self::$disposableProvidersDatabasePath);
 				if ( $database === false ){
 					throw new \Exception('Unable to read from the disposable providers database.');
 				}

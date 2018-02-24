@@ -4,9 +4,9 @@ require dirname(__FILE__) . '/php-email-address-validator.php';
 use PHPEmailAddressValidator\PHPEmailAddressValidator;
 
 //Setting up lists.
-PHPEmailAddressValidator::setWhiteListDatabasePath('whitelist.txt');
-PHPEmailAddressValidator::setBlackListDatabasePath('blacklist.txt');
-PHPEmailAddressValidator::setDisposableProvidersDatabasePath('disposable.txt');
+PHPEmailAddressValidator::setWhiteListDatabasePath(dirname(__FILE__) . '/whitelist.txt');
+PHPEmailAddressValidator::setBlackListDatabasePath(dirname(__FILE__) . '/blacklist.txt');
+PHPEmailAddressValidator::setDisposableProvidersDatabasePath(dirname(__FILE__) . '/disposable.txt');
 
 $email = 'foo.bar@mail.com';
 $disposable = 'foo.bar@yourdomain.com';
