@@ -1,4 +1,12 @@
 <?php
+/**
+* A simple tool that allows you to validate and check for e-mail address existence.
+*
+* @package     php-email-address-validator
+* @author      Enrico Sola <info@enricosola.com>
+* @version     v.1.1.2
+*/
+
 namespace PHPEmailAddressValidator{
 	class PHPEmailAddressValidator{
 		/**
